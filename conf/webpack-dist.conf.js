@@ -26,7 +26,7 @@ module.exports = {
       {
         test: /\.(css|scss)$/,
         loaders: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
+          // fallback: 'style-loader',
           use: 'css-loader?minimize!sass-loader!postcss-loader'
         })
       },
@@ -42,6 +42,19 @@ module.exports = {
         loaders: [
           'vue-loader'
         ]
+      },
+      {
+        test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: "url-loader?limit=10000"
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+        use: "file-loader"
+      },
+      // font-awesome
+      {
+        test: /font-awesome\.config\.js/,
+        use: [{ loader: "style-loader" }, { loader: "font-awesome-loader" }]
       }
     ]
   },
@@ -72,7 +85,7 @@ module.exports = {
     filename: '[name]-[hash].js'
   },
   entry: {
-    app: `./${conf.path.src('index')}`,
+    app: `./${conf.path.src("index")}`,
     vendor: Object.keys(pkg.dependencies)
   }
 };
