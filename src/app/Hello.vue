@@ -4,10 +4,10 @@
 
 <script>
 export default {
-  name: 'FountainJS',
+  name: 'Wish U the Best',
   data() {
     return {
-      hello: 'i am officially finished'
+      hello: 'i\'d wish you the best but you already had it'
     };
   }
 };

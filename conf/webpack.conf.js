@@ -11,37 +11,34 @@ module.exports = {
     loaders: [
       {
         test: /\.json$/,
-        loaders: [
-          'json-loader'
-        ]
+        loaders: ["json-loader"]
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader',
-        enforce: 'pre'
+        loader: "eslint-loader",
+        enforce: "pre"
       },
       {
         test: /\.(css|scss)$/,
-        loaders: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-          'postcss-loader'
-        ]
+        loaders: ["style-loader", "css-loader", "sass-loader", "postcss-loader"]
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: [
-          'babel-loader'
-        ]
+        loaders: ["babel-loader"]
       },
       {
         test: /\.vue$/,
-        loaders: [
-          'vue-loader'
-        ]
+        loaders: ["vue-loader"]
+      },
+      {
+        test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: "url-loader?limit=10000"
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+        use: "file-loader"
       }
     ]
   },
@@ -50,7 +47,7 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     FailPlugin,
     new HtmlWebpackPlugin({
-      template: conf.path.src('index.html')
+      template: conf.path.src("index.html")
     }),
     new webpack.LoaderOptionsPlugin({
       options: {
@@ -59,10 +56,10 @@ module.exports = {
       debug: true
     })
   ],
-  devtool: 'source-map',
+  devtool: "source-map",
   output: {
     path: path.join(process.cwd(), conf.paths.tmp),
-    filename: 'index.js'
+    filename: "index.js"
   },
-  entry: `./${conf.path.src('index')}`
+  entry: ["font-awesome/scss/font-awesome.scss", `./${conf.path.src("index")}`]
 };
