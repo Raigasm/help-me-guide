@@ -4,10 +4,10 @@
 
 <script>
 export default {
-  name: 'Hello',
+  name: 'FountainJS',
   data() {
     return {
-      hello: 'Hello World!'
+      hello: 'i am officially finished'
     };
   }
 };
