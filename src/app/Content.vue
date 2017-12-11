@@ -1,7 +1,7 @@
 <template>
   <div class="section">
     <div class="columns">
-      <div class="column is-one-half-tablet">
+      <div class="column is-one-quarter-tablet">
         <div class="box">
           <div class="icon icon-padding is-large is-pulled-left">
             <i class="fa fa-info fa-5x"></i>
@@ -14,7 +14,7 @@
           </ul>
         </div>
       </div>
-      <div class="column is-one-half-tablet">
+      <div class="column is-three-quarters-tablet">
         <div class="notification is-info">
           <span class="icon is-large is-pulled-right icon-padding">
               <i class="fa fa-home fa-5x"></i>
@@ -80,7 +80,7 @@
 <div class="box">Ask me before giving assistance and please take “No” for an answer.</div>
 <div class="box">Help me look out for steps or insufficiently wide doors.</div>
 <div class="box">We use words like “run” or “walk” too!</div>
-<div class="box">Please speak to me, not my attendant.</div>
+<div class="box">Please speak to me, not my attendant.ho</div>
           </div>
           </div>
       </div>
